@@ -11,6 +11,7 @@ class HelloWorld {
     Magic code tip:
 
     System.out.println( something ); - print something
+    System.out.print( something ); - print something without new line after
 
     x = input.nextInt() - enter integer from keyboard an put into x;
 
