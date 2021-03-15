@@ -13,6 +13,9 @@ class HelloWorld {
     System.out.println( something ); - print something
     System.out.print( something ); - print something without new line after
 
+    int a = 5;
+    System.out.println( "Hey, this is a: " + a + ". The a is nice!" ); - pretty print
+
     x = input.nextInt() - enter integer from keyboard an put into x;
 
     */
