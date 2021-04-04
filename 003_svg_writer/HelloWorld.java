@@ -1,5 +1,6 @@
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Locale;
 
 public class HelloWorld {
 
@@ -20,7 +21,7 @@ public class HelloWorld {
         try {
             FileWriter writer = new FileWriter(filename);
             writer.write("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n");
-            writer.write(String.format("<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"%d\" height=\"%d\" version=\"1.1\" viewBox=\"0 0 %d %d\">\n",
+            writer.write(String.format(Locale.ROOT, "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"%d\" height=\"%d\" version=\"1.1\" viewBox=\"0 0 %d %d\">\n",
                     width, height, width, height));
             return new Svg(writer);
         } catch (IOException e) {
@@ -37,7 +38,7 @@ public class HelloWorld {
         }
 
         try {
-            svg.writer.write(String.format("<circle cx=\"%f\" cy=\"%f\" r=\"1\" fill=\"%s\"/>\n",
+            svg.writer.write(String.format(Locale.ROOT, "<circle cx=\"%f\" cy=\"%f\" r=\"1\" fill=\"%s\"/>\n",
                     x, y, color));
         } catch (IOException e) {
             e.printStackTrace();
@@ -52,7 +53,7 @@ public class HelloWorld {
         }
 
         try {
-            svg.writer.write(String.format("<path d=\"M%f %f L%f %f\" stroke=\"%s\" stroke-width=\"1\" fill=\"none\"/>\n",
+            svg.writer.write(String.format(Locale.ROOT, "<path d=\"M%f %f L%f %f\" stroke=\"%s\" stroke-width=\"1\" fill=\"none\"/>\n",
                     x1, y1, x2, y2, color));
         } catch (IOException e) {
             e.printStackTrace();
